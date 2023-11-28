@@ -32,3 +32,46 @@ a {
 img {
   width: 100%;
 }
+
+address {
+  font-style: unset;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.header__links-list-item,
+.footer__menu-list-item {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-underline-offset: 4px;
+  transition: opacity .3s ease;
+}
+
+.header__links-list-item:hover,
+.footer__menu-list-item:hover {
+  opacity: .6;
+}
+
+.address {
+  list-style-type: none;
+}
+
+.address__item {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+  text-underline-offset: 4px;
+}
+
+.menu-link_active {
+  text-decoration: none;
+}
