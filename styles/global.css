@@ -66,6 +66,7 @@ address {
   line-height: normal;
   text-underline-offset: 4px;
   transition: opacity .3s ease;
+  color: #000;
 }
 
 .header__links-list-item:hover,
