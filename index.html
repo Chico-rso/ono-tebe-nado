@@ -15,8 +15,8 @@
   <header class="header container">
     <nav class="header__menu">
       <ul class="header__links-list">
-        <li class="header__links-list-item">
-          <a class="header__link menu-link_active header__links-list-item_no-bullit" href="#0">главная</a>
+        <li class="header__links-list-item header__links-list-item_no-bullit">
+          <a class="header__link menu-link_active" href="#0">главная</a>
         </li>
         <li class="header__links-list-item">
           <a class="header__link" href="#0">посмотреть лоты</a>
@@ -45,7 +45,18 @@
   </header>
 
   <main>
-    <section class="cover"></section>
+    <section class="cover container">
+      <div class="overlay"></div>
+      <h1 class="cover__title">
+        <span class="aligned-text no-letter-spacing">Оно</span> <span
+          class="aligned-text aligned-text_center no-letter-spacing">тебе</span> <span
+          class="aligned-text aligned-text_right letter-spacing-extended">надо</span>
+      </h1>
+      <div class="cover__description">
+        <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
+        <button class="bet-button" href="#0">Сделать ставку</button>
+      </div>
+    </section>
     <section class="lots"></section>
     <section class="about"></section>
   </main>

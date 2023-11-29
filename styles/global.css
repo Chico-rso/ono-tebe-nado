@@ -5,9 +5,22 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  min-height: 100vh;
   min-width: 1100px;
   margin: 0;
   font-family: Raleway, Arial, sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 h1,
