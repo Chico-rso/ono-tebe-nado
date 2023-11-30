@@ -86,7 +86,7 @@
 }
 
 .cover__title {
-  margin-bottom: 146px;
+  margin-bottom: 125px;
   color: #FFF;
   font-weight: 700;
   font-size: 100px;
@@ -106,20 +106,24 @@
 }
 
 .aligned-text_center {
-  padding-right: 58px;
   text-align: center;
 }
 
 .aligned-text_right {
   text-align: right;
+  letter-spacing: 60px;
+}
+
+.letter-spacing {
+  letter-spacing: 60px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 30px;
 }
 
 .no-letter-spacing {
   letter-spacing: normal;
-}
-
-.letter-spacing-extended::first-letter {
-  letter-spacing: 60px;
 }
 
 .cover__description {
