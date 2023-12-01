@@ -1,21 +1,62 @@
 /* место для вашего кода */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.address {
+  max-width: 240px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+  text-underline-offset: 4px;
+}
+
+.header__links-list-item:hover,
+.footer__menu-list-item:hover {
+  opacity: .6;
+}
+
+.header-link_active,
+.footer-link_active {
+  text-decoration: none;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  margin-bottom: 98px;
+  margin-bottom: 97px;
   padding: 92px 49px 0 51px;
 }
 
 .header__links-list {
   display: flex;
   gap: 32px;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-underline-offset: 4px;
   list-style-type: circle;
+  transition: opacity .3s ease;
 }
 
-.header__link_active {
-  text-decoration: none;
-}
 
 .header__links-list-item_no-bullit {
   list-style-type: none;
@@ -29,38 +70,6 @@
 
 .header__address {
   justify-self: end;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.footer__menu-list {
-  text-align: center;
-  list-style-type: none;
-}
-
-.footer__menu-link_active {
-  text-decoration: none;
-}
-
-.footer__social-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
-  max-width: 240px;
-  list-style-type: none;
-}
-
-.footer__social-list-item {
-  transition: opacity .3s ease;
-}
-
-.footer__social-list-item:hover {
-  opacity: .7;
 }
 
 .cover {
@@ -120,12 +129,12 @@
 }
 
 .cover__description {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 78px;
-  z-index: 2;
-  position: relative;
 }
 
 .cover__description-text,
@@ -158,6 +167,11 @@
 
 .lots {
   margin-bottom: 180px;
+}
+
+.lots.container {
+  max-width: 1340px;
+  padding: 0;
 }
 
 .lots__heading {
@@ -210,12 +224,16 @@
 .card {
   position: relative;
   z-index: 2;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 50px 40px;
   color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
@@ -231,23 +249,6 @@
   text-transform: uppercase;
 }
 
-.card__text {
-  z-index: 2;
-  font-weight: 400;
-  font-size: 20px;
-  font-style: normal;
-  line-height: 120%;
-}
-
-.card_type_film,
-.card_type_book,
-.card_type_picture {
-  z-index: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 }
@@ -260,6 +261,14 @@
   background-image: url(../images/card-lot-03.jpg);
 }
 
+.card__text {
+  z-index: 2;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 120%;
+}
+
 .about {
   display: flex;
   gap: 25px;
@@ -267,11 +276,11 @@
 }
 
 .about__column-start {
-  padding: 4px 95px 0 95px;
+  padding: 0 95px;
 }
 
 .about__column-end {
-  padding: 105px 0 0 0;
+  padding: 101px 0 0 0;
 }
 
 .about__logo {
@@ -309,4 +318,43 @@
   font-size: 20px;
   font-style: normal;
   line-height: normal;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__menu-list {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  text-underline-offset: 4px;
+  list-style-type: none;
+  transition: opacity .3s ease;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 240px;
+  list-style-type: none;
+}
+
+.footer__social-list-item {
+  transition: opacity .3s ease;
+}
+
+.footer__social-list-item:hover {
+  opacity: .7;
 }
